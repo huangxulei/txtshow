@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
         onSave: (TextCompositionConfig config, double percent) {
           // Global.prefs.setString(TextConfigKey, config);
           // searchItem.durContentIndex = (percent * NovelContentTotal).floor();
+          print("load loadChapter : ");
           print("save config: $config");
           print("save percent: $percent");
         },

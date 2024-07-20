@@ -74,17 +74,19 @@ class TextLine {
 /// 样式设置与刷新
 /// 动画设置与刷新
 class TextComposition extends ChangeNotifier {
-  final TextCompositionConfig config;
-  final Duration duration;
-  final FutureOr<List<String>> Function(int chapterIndex) loadChapter;
-  final FutureOr Function(TextCompositionConfig config, double percent)? onSave;
-  final Widget Function(TextComposition textComposition)? menuBuilder;
+  final TextCompositionConfig config; //文字排版设置
+  final Duration duration; //持续时间
+  //函数参数
+  final FutureOr<List<String>> Function(int chapterIndex) loadChapter; // 显示内容
+  final FutureOr Function(TextCompositionConfig config, double percent)?
+      onSave; //保存当前配置
+  final Widget Function(TextComposition textComposition)? menuBuilder; //菜单布局
   final String? name;
   final List<String> chapters;
   final List<AnimationController> _controllers;
-
-  double _initPercent;
-  int _firstChapterIndex;
+//分页
+  double _initPercent; //初始化百分百
+  int _firstChapterIndex; //
   int get firstChapterIndex => _firstChapterIndex;
   int _lastChapterIndex;
 
