@@ -17,6 +17,8 @@ dependencies:
         path: modules/text_composition
     sqflite: ^2.2.8+4
     sqflite_common_ffi: ^2.2.5
+    get: ^4.6.5
+    shared_preferences: ^2.2.2
 
 dev_dependencies:
     flutter_test:
